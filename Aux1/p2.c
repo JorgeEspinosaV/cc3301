@@ -31,11 +31,9 @@ int decimal(char* binario) {
 	int pow_2 = 0;
 	for (int i = 0; i < n; i++) {
 		char str = binario[i];
-		printf("bin: %s\n", str);
 		tmp_i = binario[i] - '0';
-		printf("temp: %d\n", tmp_i);
 		tmp = resultado;
-		pow_2 = power(2, i);
+		pow_2 = power(2, n-1-i);
 		resultado = tmp + pow_2*tmp_i;
 	}
 	return resultado;
