@@ -3,7 +3,7 @@
 #include <string.h>
 #include "elim.h"
 
-int comp(const char *str,const char *pat, int n){
+static int comp(const char *str,const char *pat, int n){
    while (n--){
       if(*str=='\0' || *str!=*pat){
          return 1;
